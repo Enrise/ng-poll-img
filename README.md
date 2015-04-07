@@ -6,7 +6,7 @@ It will continuously poll the `source` url, after the initial fail it will put t
 1. Download ng-poll-img.min.js from this repository OR use bower with:
 
     ```sh
-$ bower install enrise/ng-poll-img
+$ bower install ng-poll-img --save
 ```
 
 2. Include the file in your project's javascript
