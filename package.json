@@ -1,0 +1,24 @@
+{
+  "name": "ng-poll-img",
+  "version": "1.0.0",
+  "description": "An AngularJS directive which polls the server for an image and shows a fallback until it's available.",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Enrise/ng-poll-img"
+  },
+  "author": "Rick Kuipers <rskuipers@enrise.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Enrise/ng-poll-img/issues"
+  },
+  "homepage": "https://github.com/Enrise/ng-poll-img"
+}

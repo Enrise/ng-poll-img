@@ -7,5 +7,13 @@
   ],
   "description": "An AngularJS directive which polls the server for an image and shows a fallback until it's available.",
   "license": "MIT",
-  "homepage": "https://github.com/Enrise/ng-poll-img"
+  "homepage": "https://github.com/Enrise/ng-poll-img",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "ng-poll-img.js",
+    "gulpfile.js",
+    "package.json"
+  ]
 }
