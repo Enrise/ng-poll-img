@@ -1,0 +1,11 @@
+{
+  "name": "ng-poll-img",
+  "main": "dist/ng-poll-img.min.js",
+  "version": "1.0.0",
+  "authors": [
+    "Rick Kuipers <rskuipers@enrise.com>"
+  ],
+  "description": "An AngularJS directive which polls the server for an image and shows a fallback until it's available.",
+  "license": "MIT",
+  "homepage": "https://github.com/Enrise/ng-poll-img"
+}
