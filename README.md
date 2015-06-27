@@ -2,6 +2,8 @@
 An AngularJS directive which polls the server for an image and shows a fallback until it's available.
 It will continuously poll the `source` url, after the initial fail it will put the fallback as `src`, it will continue to try the `source` url and once it gets a 200 OK it will replace `src` with the `source` url.
 
+Demo: http://enrise.github.io/ng-poll-img/demo/
+
 # Usage
 1. Download ng-poll-img.min.js from this repository OR use bower with:
 
