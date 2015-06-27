@@ -1,6 +1,6 @@
 {
   "name": "ng-poll-img",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An AngularJS directive which polls the server for an image and shows a fallback until it's available.",
   "dependencies": {},
   "devDependencies": {

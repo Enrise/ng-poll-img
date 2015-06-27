@@ -2,7 +2,7 @@
  * @title ng-poll-img.js
  * @description An AngularJS directive which polls the server for an image and shows a fallback until it's available.
  * @author Rick Kuipers <rskuipers@enrise.com>
- * @version 1.0.0
+ * @version 2.0.0
  *
  * @example <poll-img source="http://example.com/2Fd1aZs.jpg" class="img-responsive" fallback="http://placehold.it/1216x400" on-success="success()"></poll-img>
  */
