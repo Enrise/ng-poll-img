@@ -42,7 +42,7 @@ angular.module('ngPollImg', [])
             }
         }
     }])
-    .factory('pollImgService', ['$http', '$interval', function($http, $interval) {
+    .factory('pollImgService', ['$http', '$interval', 'ngPollImgConfig', function($http, $interval, ngPollImgConfig) {
         var service = {};
 
         service.pollingImages = {};
@@ -72,7 +72,7 @@ angular.module('ngPollImg', [])
             service.pollImage(imageUrl, service.pollingImages[imageUrl]);
 
             if (!service.pollInterval) {
-                service.pollInterval = $interval(service.pollImages, 3000);
+                service.pollInterval = $interval(service.pollImages, ngPollImgConfig.interval);
             }
         };
 
@@ -130,4 +130,13 @@ angular.module('ngPollImg', [])
         };
 
         return service;
-    }]);
+    }])
+    .provider('ngPollImgConfig', function() {
+        this.interval = 3000;
+
+        this.$get = function() {
+            return {
+                interval: this.interval
+            };
+        };
+    });

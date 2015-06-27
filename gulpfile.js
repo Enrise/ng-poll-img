@@ -9,3 +9,7 @@ gulp.task('default', function() {
         .pipe(rename('ng-poll-img.min.js'))
         .pipe(gulp.dest('dist/'));
 });
+
+gulp.task('watch', ['default'], function() {
+    gulp.watch('ng-poll-img.js', ['default']);
+});
