@@ -5,8 +5,14 @@
         <title>ngPollImg demo</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.js"></script>
         <script src="../dist/ng-poll-img.js"></script>
+        <script>
+            var app = angular.module('app', ['ngPollImg']);
+            app.config(['ngPollImgConfigProvider', function(ngPollImgConfigProvider) {
+                ngPollImgConfigProvider.interval = 2000;
+            }]);
+        </script>
     </head>
-    <body ng-app="ngPollImg">
+    <body ng-app="app">
         <poll-img source="thisimagedoesnotexist.jpg" fallback="http://placekitten.com/g/200/300" give-up-after="5"></poll-img>
         <p>
             The kitten above is the placeholder being activated after trying to pull the source the first time.<br>

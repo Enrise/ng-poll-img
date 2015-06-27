@@ -30,3 +30,11 @@ var app = angular.module("myApp", ["ngPollImg"]);
 - **giveUpAfter** The amount of tries it should do before giving up and just leaving the fallback url active.
 - **onSuccess** An expression that will be evaluated once the source url is available.
 - **onGivingUp** An expression that will be evaluated once the source url is unavailable and the maximum amount of tries was reached.
+
+You can change the interval using:
+
+```js
+app.config(['ngPollImgConfigProvider', function(ngPollImgConfigProvider) {
+    ngPollImgConfigProvider.interval = 2000;
+}]);
+```
