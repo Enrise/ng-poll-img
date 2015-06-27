@@ -2,6 +2,8 @@
 An AngularJS directive which polls the server for an image and shows a fallback until it's available.
 It will continuously poll the `source` url, after the initial fail it will put the fallback as `src`, it will continue to try the `source` url and once it gets a 200 OK it will replace `src` with the `source` url.
 
+Demo: http://enrise.github.io/ng-poll-img/demo/
+
 # Usage
 1. Download ng-poll-img.min.js from this repository OR use bower with:
 
@@ -25,6 +27,14 @@ var app = angular.module("myApp", ["ngPollImg"]);
 # Config
 - **source** The source url that you want to load, if the url returns a 200 after the first try it will immediately be shown.
 - **fallback** The fallback url that will be used when the source url does not return a 200 after the first try.
-- **interval** The amount of time between tries in milliseconds.
 - **giveUpAfter** The amount of tries it should do before giving up and just leaving the fallback url active.
 - **onSuccess** An expression that will be evaluated once the source url is available.
+- **onGivingUp** An expression that will be evaluated once the source url is unavailable and the maximum amount of tries was reached.
+
+You can change the interval using:
+
+```js
+app.config(['ngPollImgConfigProvider', function(ngPollImgConfigProvider) {
+    ngPollImgConfigProvider.interval = 2000;
+}]);
+```
