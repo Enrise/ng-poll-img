@@ -40,7 +40,7 @@ angular.module('ngPollImg', [])
                     }
                 );
             }
-        }
+        };
     }])
     .factory('pollImgService', ['$http', '$interval', 'ngPollImgConfig', function($http, $interval, ngPollImgConfig) {
         var service = {};
