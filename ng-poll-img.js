@@ -2,7 +2,7 @@
  * @title ng-poll-img.js
  * @description An AngularJS directive which polls the server for an image and shows a fallback until it's available.
  * @author Rick Kuipers <rskuipers@enrise.com>
- * @version 2.0.0
+ * @version 2.0.1
  *
  * @example <poll-img source="http://example.com/2Fd1aZs.jpg" class="img-responsive" fallback="http://placehold.it/1216x400" on-success="success()"></poll-img>
  */
@@ -96,9 +96,10 @@ angular.module('ngPollImg', [])
                     });
                     pollObj.state = 'PENDING';
                     if (pollObj.giveUpAfter > 0 && pollObj.tries >= pollObj.giveUpAfter) {
+                        var giveUp = pollObj.giveUp;
                         service.finishImage(pollObj, 'GIVEN_UP');
 
-                        angular.forEach(pollObj.giveUp, function(callback) {
+                        angular.forEach(giveUp, function(callback) {
                             callback();
                         });
                     }
