@@ -10,13 +10,21 @@
             app.config(['ngPollImgConfigProvider', function(ngPollImgConfigProvider) {
                 ngPollImgConfigProvider.interval = 2000;
             }]);
+
+            app.controller('DemoController', ['$scope', function($scope) {
+                $scope.onGivingUp = function() {
+                    alert('I have given up!');
+                };
+            }]);
         </script>
     </head>
     <body ng-app="app">
-        <poll-img source="thisimagedoesnotexist.jpg" fallback="http://placekitten.com/g/200/300" give-up-after="5"></poll-img>
-        <p>
-            The kitten above is the placeholder being activated after trying to pull the source the first time.<br>
-            Open up your network tab in the developer toolbar and you can see it tries to pull the source 5 times before giving up.
-        </p>
+        <div ng-controller="DemoController">
+            <poll-img source="thisimagedoesnotexist.jpg" fallback="http://placehold.it/350x150" give-up-after="3" on-giving-up="onGivingUp()"></poll-img>
+            <p>
+                The kitten above is the placeholder being activated after trying to pull the source the first time.<br>
+                Open up your network tab in the developer toolbar and you can see it tries to pull the source 5 times before giving up.
+            </p>
+        </div>
     </body>
 </html>

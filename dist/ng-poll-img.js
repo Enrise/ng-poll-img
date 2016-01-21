@@ -96,9 +96,10 @@ angular.module('ngPollImg', [])
                     });
                     pollObj.state = 'PENDING';
                     if (pollObj.giveUpAfter > 0 && pollObj.tries >= pollObj.giveUpAfter) {
+                        var giveUp = pollObj.giveUp;
                         service.finishImage(pollObj, 'GIVEN_UP');
 
-                        angular.forEach(pollObj.giveUp, function(callback) {
+                        angular.forEach(giveUp, function(callback) {
                             callback();
                         });
                     }
