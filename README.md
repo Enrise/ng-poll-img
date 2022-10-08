@@ -1,3 +1,9 @@
+# Archived and unmaintained
+
+This is an old repository that is no longer used or maintained. We advice to no longer use this repository.
+
+## Original README can be found below:
+
 # ngPollImg
 An AngularJS directive which polls the server for an image and shows a fallback until it's available.
 It will continuously poll the `source` url, after the initial fail it will put the fallback as `src`, it will continue to try the `source` url and once it gets a 200 OK it will replace `src` with the `source` url.
